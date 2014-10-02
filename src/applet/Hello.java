@@ -3,7 +3,7 @@ package applet;
 import java.applet.Applet;
 import java.awt.Graphics;
 
-public class hello extends Applet {
+public class Hello extends Applet {
 	String str;
 	public void init(){
 		str="Hello,this is a Applet";
