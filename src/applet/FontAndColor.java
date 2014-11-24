@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 
+@SuppressWarnings("serial")
 public class FontAndColor extends Applet {
     Font fnt1= new Font("Serif",Font.ITALIC,25);
     Font fnt2 = new Font("Monospaced",Font.BOLD+Font.ITALIC,24);
