@@ -5,21 +5,18 @@ import java.awt.GridLayout;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.UIManager;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
-import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 
 @SuppressWarnings("serial")
-public class BorderSample extends JFrame {
+public class BorderSample extends Sample{
 
 	private JPanel p1;
 	private Border border[] = new Border[7];
@@ -85,14 +82,10 @@ public class BorderSample extends JFrame {
 	}
 
 	public static void main(String[] args) throws Exception {
-		UIManager.setLookAndFeel(new NimbusLookAndFeel());
 		BorderSample bs = new BorderSample();
 
 		bs.setSize(200, 500);
 		bs.setTitle("边框");
-		bs.setLocationRelativeTo(null);
-		bs.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		bs.setVisible(true);
 
 	}
 
