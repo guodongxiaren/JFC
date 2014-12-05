@@ -14,6 +14,7 @@ public class GraphicDemo extends JPanel{
 	}
 
 	public static void main(String[] args) {
+
 	}
 
 }

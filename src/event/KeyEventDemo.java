@@ -1,40 +1,38 @@
-package awt;
+package event;
 
 import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
 
+import swing.Sample;
+
 @SuppressWarnings("serial")
-public class KeyEventDemo extends JFrame {
+public class KeyEventDemo extends Sample {
 	private KeyboardPanel keyboardPanel = new KeyboardPanel();
 
-	/** Initialize UI */
 	public KeyEventDemo() {
-		// Add the keyboard panel to accept and display user input
 		add(keyboardPanel);
-		// Set focus
+		// 获取焦点，必不可少
 		keyboardPanel.setFocusable(true);
 	}
 
-	/** Main method */
 	public static void main(String[] args) {
 		KeyEventDemo frame = new KeyEventDemo();
 		frame.setTitle("KeyEventDemo");
-		frame.setLocationRelativeTo(null); // Center the frame
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(300, 300);
-		frame.setVisible(true);
 	}
 
-	// Inner class: KeyboardPanel for receiving key input
+	// 内部类
 	static class KeyboardPanel extends JPanel {
 		private int x = 100;
 		private int y = 100;
 		private int radius = 50;
+
 		public KeyboardPanel() {
 			addKeyListener(new KeyAdapter() {
 				public void keyPressed(KeyEvent e) {
+					println("按下");
 					switch (e.getKeyCode()) {
 					case KeyEvent.VK_DOWN:
 						y += 10;
@@ -51,13 +49,26 @@ public class KeyEventDemo extends JFrame {
 					}
 					repaint();
 				}
+
+				@Override
+				public void keyTyped(KeyEvent e) {
+					// super.keyTyped(e);
+					println("敲击");
+				}
+
+				@Override
+				public void keyReleased(KeyEvent e) {
+					// super.keyReleased(e);
+					println("释放");
+				}
+
 			});
 		}
 
-		/** Draw the character */
 		protected void paintComponent(Graphics g) {
 			super.paintComponent(g);
 			g.drawOval(x, y, radius, radius);
+			// g.drawString("Hello World",x,y);
 		}
 	}
 }

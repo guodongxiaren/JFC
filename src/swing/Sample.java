@@ -18,7 +18,7 @@ public class Sample extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 	}
-	public void println(Object ob){
+	public static void println(Object ob){
 		System.out.println(ob);
 	}
 }
