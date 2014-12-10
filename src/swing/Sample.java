@@ -14,11 +14,14 @@ public class Sample extends JFrame {
 		} catch (UnsupportedLookAndFeelException e) {
 			e.printStackTrace();
 		}
+		// 缺省的大小
+		this.setSize(200, 100);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 	}
-	public static void println(Object ob){
+
+	public static void println(Object ob) {
 		System.out.println(ob);
 	}
 }

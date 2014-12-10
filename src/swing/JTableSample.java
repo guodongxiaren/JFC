@@ -22,8 +22,8 @@ public class JTableSample extends Sample {
 		col.addElement("ID");
 		col.addElement("用戶名");
 		col.addElement("密码");
-		//因为v中没有密码字段的数据，所以显示的时候，密码列都是空。
-		//如果col中只有ID字段，那么表格将只显示ID列的数据，而不去显示用户名列。
+		// 因为v中没有密码字段的数据，所以显示的时候，密码列都是空。
+		// 如果col中只有ID字段，那么表格将只显示ID列的数据，而不去显示用户名列。
 		JTable table = new JTable(v, col);
 		// 注意构造方法
 		JScrollPane sp = new JScrollPane(table);
@@ -32,8 +32,7 @@ public class JTableSample extends Sample {
 	}
 
 	public static void main(String[] args) {
-		JTableSample spl = new JTableSample();
-		spl.setSize(200, 100);
+		new JTableSample();
 	}
 
 }

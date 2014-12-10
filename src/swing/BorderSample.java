@@ -16,7 +16,7 @@ import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
 @SuppressWarnings("serial")
-public class BorderSample extends Sample{
+public class BorderSample extends Sample {
 
 	private JPanel p1;
 	private Border border[] = new Border[7];
@@ -57,7 +57,7 @@ public class BorderSample extends Sample{
 
 		BevelBorder loweredBevelBorder = (BevelBorder) BorderFactory
 				.createLoweredBevelBorder();// 创建下沉边框
-		
+
 		JLabel le = new JLabel("空边框");
 		le.setBorder(emptyBorder);
 		JLabel ll = new JLabel("线性边框");

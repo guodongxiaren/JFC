@@ -28,8 +28,7 @@ public class JComboBoxSample extends Sample {
 	}
 
 	public static void main(String[] args) {
-		JComboBoxSample spl = new JComboBoxSample();
-		spl.setSize(200, 100);
+		new JComboBoxSample();
 	}
 
 	class ComboItemListener implements ItemListener {
@@ -43,8 +42,8 @@ public class JComboBoxSample extends Sample {
 		public void itemStateChanged(ItemEvent e) {
 			// 不加if判断，则会执行两次监听方法
 			if (e.getStateChange() == ItemEvent.SELECTED) {
-				//下标从0算起，所以要+1
-				println("您选中的是第" + (cb.getSelectedIndex()+1) + "个："
+				// 下标从0算起，所以要+1
+				println("您选中的是第" + (cb.getSelectedIndex() + 1) + "个："
 						+ cb.getSelectedItem());
 			}
 		}

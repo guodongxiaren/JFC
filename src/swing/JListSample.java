@@ -19,8 +19,7 @@ public class JListSample extends Sample {
 	}
 
 	public static void main(String[] args) {
-		JListSample spl = new JListSample();
-		spl.setSize(200, 100);
+		new JListSample();
 	}
 
 }
