@@ -10,7 +10,7 @@ import javax.swing.JButton;
 import swing.Sample;
 
 /**
- * 测试事件触发的顺序，即某一事件是另一事件的子类。 那么如果同时注册这两种事件，则触发的顺序是？
+ * 测试事件触发的顺序， 如果一个组件同时注册这两种事件，则触发的顺序是？
  * 
  * @author jelly
  *
@@ -33,7 +33,6 @@ public class TestEventOrder extends Sample {
 			public void mouseClicked(MouseEvent e) {
 				println("触发鼠标点击事件");
 			}
-
 		});
 	}
 
