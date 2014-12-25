@@ -8,7 +8,6 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import swing.Sample;
@@ -17,12 +16,10 @@ import swing.Sample;
 public class SignUpPanel extends JPanel{
 
 	private int count;
-	private String fields[];
 	private JLabel label[];
 	private JComponent comp[];
 	private JButton jbok;
     public SignUpPanel(String[] fields) {
-    	this.fields = fields;
     	count = fields.length;
     	jbok = new JButton("确定");
     	JPanel p1 = new JPanel(new GridLayout(count,2,5,5));
